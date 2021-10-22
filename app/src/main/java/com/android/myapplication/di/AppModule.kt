@@ -3,6 +3,7 @@ package com.android.myapplication.di
 import com.android.myapplication.network.ApiHelper
 import com.android.myapplication.network.ApiHelperImpl
 import com.android.myapplication.network.ApiService
+import com.android.myapplication.ui.user.model.AccessLocalData
 import com.ihsanbal.logging.Level
 import com.ihsanbal.logging.LoggingInterceptor
 import dagger.Module
@@ -54,7 +55,9 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideApiHelper(apiHelper: ApiHelperImpl): ApiHelper = apiHelper
+    fun provideApiHelper(apiHelperImpl: ApiHelperImpl): ApiHelper = apiHelperImpl
+
+
 
 
 }
