@@ -1,6 +1,6 @@
 package com.android.myapplication.network
 
-import com.android.myapplication.ui.job.ui.user.model.CommonResponse
+import com.android.myapplication.ui.user.model.CommonResponse
 import retrofit2.Response
 import retrofit2.http.GET
 
