@@ -6,9 +6,9 @@ import javax.inject.Inject
 /**
  *Created by Nivetha S on 22-10-2021.
  */
-class AccessLocalData () {
+class AccessLocalData() {
 
     fun method() {
-        Log.e("Nive ", "method:here  ")
+        Log.e("Tag ", "method:here  ")
     }
 }

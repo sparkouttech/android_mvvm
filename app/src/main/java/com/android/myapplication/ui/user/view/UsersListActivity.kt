@@ -6,6 +6,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.myapplication.common.ViewModelFactory
 import com.android.myapplication.databinding.ActivityUsersBinding
 import com.android.myapplication.network.Status
 import com.android.myapplication.ui.user.model.AccessLocalData
@@ -20,6 +21,10 @@ class UsersListActivity : AppCompatActivity() {
     @Inject
     lateinit var accessLocalData: AccessLocalData
 
+    /* @Inject
+     var viewModelFactory: ViewModelFactory? = null*/
+
+
     private lateinit var binding: ActivityUsersBinding
     private val userViewModel: UserViewModel by viewModels()
 
@@ -28,6 +33,9 @@ class UsersListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUsersBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+//      userViewModel = ViewModelProviders.of(this, viewModelFactory).get(UserViewModel::class.java)
+
         accessLocalData.method()
         userViewModel.getUsers()
         userViewModel.res.observe(this, Observer {
